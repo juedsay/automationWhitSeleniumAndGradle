@@ -11,6 +11,7 @@ public class GoogleSteps {
     public void navigateToGoogle() {
         
         google.navigateToGoogle();
+        google.clickGoogleSearch();
     }
 
     @When("I search for a criteria")
