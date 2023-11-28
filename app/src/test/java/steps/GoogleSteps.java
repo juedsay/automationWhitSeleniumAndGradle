@@ -11,16 +11,16 @@ public class GoogleSteps {
     public void navigateToGoogle() {
         
         google.navigateToGoogle();
-        google.clickGoogleSearch();
     }
-
+    
     @When("I search for a criteria")
-    public void enterSearchCriteria(String query) {
-        
+    public void enterSearchCriteria() {
+        google.enterSearchCriteria("Google");
     }
-
+    
     @And ("Click on the search button")
     public void clickSearchButton() {
+        google.clickGoogleSearch();
         
     }
 
