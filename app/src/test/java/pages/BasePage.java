@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,6 +24,7 @@ public class BasePage {
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         BasePage.wait = new WebDriverWait(driver, 10);
+        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //It is not recommended because it increases workflow.
     }
 
     public BasePage(WebDriver driver) {
@@ -81,4 +84,12 @@ public class BasePage {
 
         return Find(cellNeed).getText();
     }
+
+    public void setValueOnTable(String locator, int row, int column, String stringToSend) {
+        
+        String cellToFill = locator + "/table/tbody/tr[" + row + "]/td[" + column + "]";
+
+        Find(cellToFill).sendKeys(stringToSend);
+    }
+
 }
