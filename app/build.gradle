@@ -33,7 +33,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'testautomation.App'
+    mainClass = 'runner.java'
 }
 
 tasks.named('test') {

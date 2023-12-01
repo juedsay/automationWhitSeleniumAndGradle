@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,6 +14,7 @@ public class BasePage {
     
     protected static WebDriver driver;
     private static WebDriverWait wait;
+    private static Actions action;
 
 
     static {
@@ -44,21 +46,39 @@ public class BasePage {
         Find(locator).sendKeys(textToWrite);
     }
 
-    public void selectFromDropdownByValue(String locator, String valueToLoSelect) {
+    public void selectFromDropdownByValue(String locator, String valueToSelect) {
         Select dropdown = new Select(Find(locator));
 
-        dropdown.selectByValue(valueToLoSelect);
+        dropdown.selectByValue(valueToSelect);
     }
 
-    public void selectFromDropdownByIndex(String locator, int valueToLoSelect) {
+    public void selectFromDropdownByIndex(String locator, int valueToSelect) {
         Select dropdown = new Select(Find(locator));
 
-        dropdown.selectByIndex(valueToLoSelect);
+        dropdown.selectByIndex(valueToSelect);
     }
 
-    public void selectFromDropdownByText(String locator, String valueToLoSelect) {
+    public void selectFromDropdownByText(String locator, String valueToSelect) {
         Select dropdown = new Select(Find(locator));
 
-        dropdown.selectByVisibleText(valueToLoSelect);
+        dropdown.selectByVisibleText(valueToSelect);
+    }
+
+    public void hoverOverElement(String locator) {
+        action.moveToElement(Find(locator));
+    }
+
+    public void doubleClick(String locator) {
+        action.doubleClick(Find(locator));
+    }
+
+    public void rightClick(String locator) {
+        action.contextClick(Find(locator));
+    }
+
+    public String getValueFromTable(String locator, int row, int column) {
+        String cellNeed = locator + "/table/tbody/tr[" + row + "]/td[" + column + "]";
+
+        return Find(cellNeed).getText();
     }
 }

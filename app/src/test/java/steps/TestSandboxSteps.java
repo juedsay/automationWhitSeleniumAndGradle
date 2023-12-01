@@ -1,19 +1,19 @@
 package steps;
 
 import io.cucumber.java.en.*;
-import pages.TestSandBox;
+import pages.SandBoxPage;
 
-public class TestSandboxSteps {
+public class TestSandBoxSteps {
     
-    TestSandBox sandboxPage = new TestSandBox();
+    SandBoxPage sandboxPage = new SandBoxPage();
 
     @Given("I navigate to the sandbox page")
-    public void navigateToSandboxSite() {
+    public void navigateToSandboxPage() {
         sandboxPage.navigateToSandbox();
     }
 
     @And("Select a value from the dropdown")
     public void selectState() {
-        sandboxPage.selectCategory("Manual");
+        sandboxPage.selectCategory("FunctionTesting");
     }
 }
