@@ -3,12 +3,12 @@ package steps;
 import io.cucumber.java.en.*;
 import pages.SandBoxPage;
 
-public class TestSandBoxSteps {
+public class SandBoxSteps {
     
     SandBoxPage sandboxPage = new SandBoxPage();
 
-    @Given("I navigate to the sandbox page")
-    public void navigateToSandboxPage() {
+    @Given("I navigate to the sandbox")
+    public void navigateToSandboxSite() {
         sandboxPage.navigateToSandbox();
     }
 

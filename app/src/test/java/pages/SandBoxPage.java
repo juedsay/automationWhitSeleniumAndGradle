@@ -5,12 +5,11 @@ public class SandBoxPage extends BasePage {
     private String categoryDropdown = "//select[@id='testingtypes']";
 
     public SandBoxPage() {
-        super(driver);        
-
+        super(driver); 
     }
 
     public void navigateToSandbox() {
-        navigateTo("https://automationpractice.qualitytestinghub.com/dropdown-list");
+        navigateTo("https://automationpractice.qualitytestinghub.com/dropdown-list/");
     }
 
     public void selectCategory(String category) {
