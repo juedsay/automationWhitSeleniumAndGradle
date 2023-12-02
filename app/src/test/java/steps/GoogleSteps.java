@@ -1,5 +1,7 @@
 package steps;
 
+import org.junit.Assert;
+
 import io.cucumber.java.en.*;
 import pages.GooglePage;
 
@@ -26,6 +28,6 @@ public class GoogleSteps {
 
     @Then ("The results match the criteria")
     public void validateResults(String query) {
-        
+        Assert.assertEquals("Text I hope to receive", google.firstResult());
     }
 }

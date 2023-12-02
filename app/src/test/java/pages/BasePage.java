@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -103,5 +104,15 @@ public class BasePage {
     public void dismissAlert(){
         driver.switchTo().alert().dismiss();
     }
+
+    // public void validateText(String locator, String textToValidate){
+    //     Assert.assertEquals(textToValidate, Find(locator).getText());
+    // } It is not recommended to use validations in the BasePage
+
+    public String textFromElement(String locator){
+        return Find(locator).getText();
+    }
+
+
 
 }
