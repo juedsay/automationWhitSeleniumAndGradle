@@ -1,7 +1,5 @@
 package pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +15,7 @@ public class BasePage {
     protected static WebDriver driver;
     private static WebDriverWait wait;
     private static Actions action;
+    
 
 
     static {
@@ -29,6 +28,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         BasePage.driver = driver;
+        PageFactoryPage.initElements(driver, this);
         wait = new WebDriverWait(driver, 10);
     }
 
@@ -90,6 +90,18 @@ public class BasePage {
         String cellToFill = locator + "/table/tbody/tr[" + row + "]/td[" + column + "]";
 
         Find(cellToFill).sendKeys(stringToSend);
+    }
+
+    public void switchToiFrame(int iFrameIndex) {
+        driver.switchTo().frame(iFrameIndex);
+    }
+
+    public void switchToParentFrame() {
+        driver.switchTo().parentFrame();
+    }
+
+    public void dismissAlert(){
+        driver.switchTo().alert().dismiss();
     }
 
 }
