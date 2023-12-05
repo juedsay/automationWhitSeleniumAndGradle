@@ -21,7 +21,7 @@ public class ListPage extends BasePage {
 
     public void enterSearchCriteria() throws InterruptedException {
         try {
-            Thread.sleep(600);//I use this "sleep" because in the list of this website is necessary
+            Thread.sleep(600);//I use this "sleep" because in the list of this website is necessary (It is a particular case, it is not recommended to use it).
             write(searchField, "B");            
         } catch (NoSuchElementException e) {
             System.out.println("The WebElement Search couldn't be found.");
@@ -32,6 +32,7 @@ public class ListPage extends BasePage {
     public List<String> getAllSearchResults(){
         List<WebElement> list = bringMeAllElements(searchResults);
         List<String> stringFromList = new ArrayList<String>();
+
         for (WebElement e: list){
             stringFromList.add(e.getText());
         }

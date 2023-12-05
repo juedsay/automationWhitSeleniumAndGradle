@@ -39,6 +39,11 @@ public class BasePage {
         driver.get(url);
     }
 
+    public static void closeBrowser(){
+        driver.quit();
+        // driver.close(); //Other alternative but the "quit" method completely close the browser instance.
+    }
+
     private WebElement Find(String locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
