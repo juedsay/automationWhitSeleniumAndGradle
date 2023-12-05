@@ -1,7 +1,6 @@
 package steps;
 
 import java.util.List;
-
 import io.cucumber.java.en.*;
 import pages.ListPage;
 
@@ -22,7 +21,7 @@ public class ListSteps {
     @Then("I can find the text in the list")
     public void theTableIsThere(){
         List<String> lista = list.getAllSearchResults();
-        boolean textIsThere = lista.contains("Seatle, Washington");
+        boolean textIsThere = lista.contains("Seattle, Washington");
 
         if(textIsThere){
             System.out.println("The text is on the list: PASSED.");

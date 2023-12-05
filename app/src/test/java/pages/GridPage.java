@@ -20,7 +20,7 @@ public class GridPage extends BasePage {
     }
 
     public boolean cellStatus(){
-        return elementIsDiplayed(mainTable);
+        return elementIsDisplayed(mainTable);
     }
     
 }
