@@ -31,10 +31,10 @@ dependencies {
     implementation 'com.google.guava:guava:31.1-jre'
 }
 
-// application {
-//     // Define the main class for the application.
-//     mainClass = 'runner.java'
-// }
+application {
+    // Define the main class for the application.
+    mainClass = 'testautomation.App'
+}
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
