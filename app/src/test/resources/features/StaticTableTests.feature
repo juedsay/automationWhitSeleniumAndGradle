@@ -5,7 +5,6 @@ Rule: The user can return values from table and validate them.
 
 Background: Navigate to Table web app.
     Given I navigate to the static table
-
 @Smoke @Regression
 Scenario: As a Test Engineer, I want to retrieve the value of an static table
     Then I can return the value I wanted
