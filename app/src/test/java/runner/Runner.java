@@ -10,13 +10,18 @@ import pages.BasePage;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = "steps",
-    tags = "@Test"
-    // plugin = {"pretty", "html:target/cucumber-reports"}
+    tags = "@Grid and @Smoke",
+    plugin = {"pretty", "html:target/cucumber-reports"}
 )
 
 public class runner {
     @AfterClass
     public static void cleanDriver(){
         BasePage.closeBrowser();
+    }
+
+    @Override
+    public String toString() {
+        return "runner []";
     }
 }
