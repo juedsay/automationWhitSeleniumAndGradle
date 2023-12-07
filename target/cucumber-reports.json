@@ -1,0 +1,139 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 11,
+        "name": "Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.",
+        "description": "",
+        "id": "i-can-find-a-team-inside-a-state.;scenario-outline-name:-scenario-outline-name:-as-a-test-engineer--i-want-to-validate-that-a-text-is-present-inside-the-list.;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4023873200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to the list page",
+            "match": {
+              "location": "ListSteps.navigateToListPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1801258900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I search Boston in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Boston",
+                  "offset": 9
+                }
+              ],
+              "location": "ListSteps.searchTheList(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 84864700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I can find Boston Celtics in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Boston Celtics",
+                  "offset": 11
+                }
+              ],
+              "location": "ListSteps.theCityIsThere(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@List"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.",
+        "description": "",
+        "id": "i-can-find-a-team-inside-a-state.;scenario-outline-name:-scenario-outline-name:-as-a-test-engineer--i-want-to-validate-that-a-text-is-present-inside-the-list.;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 606012200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to the list page",
+            "match": {
+              "location": "ListSteps.navigateToListPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1131484500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I search New York in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "New York",
+                  "offset": 9
+                }
+              ],
+              "location": "ListSteps.searchTheList(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 103399100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I can find New York Knicks in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "New York Knicks",
+                  "offset": 11
+                }
+              ],
+              "location": "ListSteps.theCityIsThere(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@List"
+          }
+        ]
+      }
+    ],
+    "name": "I can find a team inside a state.",
+    "description": "",
+    "id": "i-can-find-a-team-inside-a-state.",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/ListPageTest.feature",
+    "tags": []
+  }
+]

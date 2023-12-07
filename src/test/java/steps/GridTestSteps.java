@@ -2,7 +2,7 @@ package steps;
 
 import org.junit.Assert;
 
-import io.cucumber.java.en.*;
+import cucumber.api.java.en.*;
 import pages.GridPage;
 
 public class GridTestSteps {
