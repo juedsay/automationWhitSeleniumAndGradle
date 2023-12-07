@@ -19,10 +19,10 @@ public class ListPage extends BasePage {
         navigateTo("https://twitter.github.io/typeahead.js/examples/");
     }
 
-    public void enterSearchCriteria() throws InterruptedException {
+    public void enterSearchCriteria(String state) throws InterruptedException {
         try {
             Thread.sleep(600);//I use this "sleep" because in the list of this website is necessary (It is a particular case, it is not recommended to use it).
-            write(searchField, "B");            
+            write(searchField, state);  
         } catch (NoSuchElementException e) {
             System.out.println("The WebElement Search couldn't be found.");
             e.printStackTrace();         

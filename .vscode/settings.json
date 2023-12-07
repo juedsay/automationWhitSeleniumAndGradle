@@ -2,6 +2,8 @@
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "interactive",
     "cSpell.words": [
-        "chromedriver"
+        "aventstack",
+        "chromedriver",
+        "extentreports"
     ]
 }

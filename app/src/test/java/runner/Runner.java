@@ -10,8 +10,10 @@ import pages.BasePage;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = "steps",
-    tags = "@Grid and @Smoke",
-    plugin = {"pretty", "html:target/cucumber-reports"}
+    plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "json:target/cucumber-reports.json"},
+    monochrome = true,
+    tags = "@List"
+    // plugin = {"pretty", "html:target/cucumber-reports"}
 )
 
 public class runner {
@@ -20,8 +22,4 @@ public class runner {
         BasePage.closeBrowser();
     }
 
-    @Override
-    public String toString() {
-        return "runner []";
-    }
 }

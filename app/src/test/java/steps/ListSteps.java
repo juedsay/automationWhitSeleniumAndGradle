@@ -13,20 +13,20 @@ public class ListSteps {
         list.navigateToListPage();
     }
 
-    @When("I search the list")
-    public void searchTheList() throws InterruptedException {
-        list.enterSearchCriteria();
+    @When("I search (.+) in the list")
+    public void searchTheList(String state) throws InterruptedException {
+        list.enterSearchCriteria(state);
     }
 
-    @Then("I can find the text in the list")
-    public void theTableIsThere(){
+    @Then("I can find (.+) in the list")
+    public void theCityIsThere(String team){
         List<String> lista = list.getAllSearchResults();
-        boolean textIsThere = lista.contains("Boston");
+        boolean textIsThere = lista.contains(team);
 
         if(textIsThere){
-            System.out.println("The text is on the list: PASSED.");
+            System.out.println("The team is on the list: PASSED.");
         }else{
-            throw new Error("The text is not on the list: FAILED!");
+            throw new Error("The team is not on the list: FAILED!");
         }        
     }
 }
