@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6466208300,
+              "duration": 4566756101,
               "status": "passed"
             },
             "line": 5,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 1101039199,
+              "duration": 1034105200,
               "status": "passed"
             },
             "line": 6,
@@ -42,7 +42,7 @@
           },
           {
             "result": {
-              "duration": 52476901,
+              "duration": 56642299,
               "status": "passed"
             },
             "line": 7,
@@ -75,7 +75,7 @@
         "steps": [
           {
             "result": {
-              "duration": 442791300,
+              "duration": 487686599,
               "status": "passed"
             },
             "line": 5,
@@ -87,7 +87,7 @@
           },
           {
             "result": {
-              "duration": 831431300,
+              "duration": 1032960400,
               "status": "passed"
             },
             "line": 6,
@@ -105,7 +105,7 @@
           },
           {
             "result": {
-              "duration": 45918400,
+              "duration": 79778300,
               "status": "passed"
             },
             "line": 7,
@@ -135,5 +135,130 @@
     "keyword": "Feature",
     "uri": "src/test/resources/features/ListPageTest.feature",
     "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Navigate to Table web app.",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1287038100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I navigate to the static table",
+            "match": {
+              "location": "GridTestSteps.navigateToGridPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "As a Test Engineer, I want to retrieve the value of an static table",
+        "description": "",
+        "id": "test-diffetent-actions-on-a-static-table-page;as-a-test-engineer--i-want-to-retrieve-the-value-of-an-static-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3114069400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I can return the value I wanted",
+            "match": {
+              "location": "GridTestSteps.returnValue()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Grid"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "Navigate to Table web app.",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 668830199,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I navigate to the static table",
+            "match": {
+              "location": "GridTestSteps.navigateToGridPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "As a Test Engineer, I want to validate the static table is displayed.",
+        "description": "",
+        "id": "test-diffetent-actions-on-a-static-table-page;as-a-test-engineer--i-want-to-validate-the-static-table-is-displayed.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1086561100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I can validate the table is displayed",
+            "match": {
+              "location": "GridTestSteps.theTableIsThere()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Grid"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Test diffetent actions on a static Table page",
+    "description": "Rule: The user can return values from table and validate them.",
+    "id": "test-diffetent-actions-on-a-static-table-page",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/StaticTableTests.feature",
+    "tags": [
+      {
+        "name": "@Grid",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

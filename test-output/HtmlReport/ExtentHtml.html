@@ -45,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 8, 2023 01:12:32 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 8, 2023 01:34:16 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -73,6 +73,9 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@List</a></li>
+					<li><a href='#'>@Grid</a></li>
+					<li><a href='#'>@Smoke</a></li>
+					<li><a href='#'>@Regression</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -113,7 +116,7 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -127,7 +130,7 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -141,7 +144,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>10</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -165,7 +168,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>I can find a team inside a state.</span>
-						<span class='test-time'>Dec 8, 2023 01:12:33 PM</span>
+						<span class='test-time'>Dec 8, 2023 01:34:17 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -179,7 +182,7 @@
     <div class='category-list'>
         <span class='category label'>@List</span>
     </div>
-    <span class='duration right label'>0h 0m 8s+828ms</span>
+    <span class='duration right label'>0h 0m 7s+212ms</span>
     <div class="bdd-test">
         <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.</div>
         <table class='runtime-table table-striped table'><tr><td>state</td><td>team</td></tr><tr><td>Boston</td><td>Boston Celtics</td></tr><tr><td>New York</td><td>New York Knicks</td></tr></table>
@@ -218,6 +221,63 @@
                             <div class="node-step"></div>
                     </li>
             </ul>
+        </li>
+    </ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Test diffetent actions on a static Table page</span>
+						<span class='test-time'>Dec 8, 2023 01:34:24 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+    <a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+    <a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+    <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+    <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='test-desc'>Rule: The user can return values from table and validate them.</div>
+<div class='scenario node' test-id='12' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@Grid</span>
+        <span class='category label'>@Smoke</span>
+        <span class='category label'>@Regression</span>
+    </div>
+    <span class='duration right label'>0h 0m 4s+404ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: As a Test Engineer, I want to retrieve the value of an static table</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='13' class='node given pass' status='pass'>
+            <div class="step-name" title="GridTestSteps.navigateToGridPage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I navigate to the static table</div>
+                <div class="node-step"></div>
+        </li>
+        <li test-id='14' class='node then pass' status='pass'>
+            <div class="step-name" title="GridTestSteps.returnValue()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I can return the value I wanted</div>
+                <div class="node-step"></div>
+        </li>
+    </ul>
+</div>
+<div class='scenario node' test-id='15' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@Grid</span>
+        <span class='category label'>@Regression</span>
+    </div>
+    <span class='duration right label'>0h 0m 1s+758ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: As a Test Engineer, I want to validate the static table is displayed.</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='16' class='node given pass' status='pass'>
+            <div class="step-name" title="GridTestSteps.navigateToGridPage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I navigate to the static table</div>
+                <div class="node-step"></div>
+        </li>
+        <li test-id='17' class='node then pass' status='pass'>
+            <div class="step-name" title="GridTestSteps.theTableIsThere()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I can validate the table is displayed</div>
+                <div class="node-step"></div>
         </li>
     </ul>
 </div>
@@ -285,18 +345,132 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 8, 2023 01:12:33 PM</td>
+										<td>Dec 8, 2023 01:34:17 PM</td>
 										<td class='linked' test-id='2'>I can find a team inside a state..Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 8, 2023 01:12:33 PM</td>
+										<td>Dec 8, 2023 01:34:17 PM</td>
 										<td class='linked' test-id='3'>I can find a team inside a state..Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list..Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 8, 2023 01:12:40 PM</td>
+										<td>Dec 8, 2023 01:34:22 PM</td>
 										<td class='linked' test-id='7'>I can find a team inside a state..Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list..Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Grid</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 8, 2023 01:34:24 PM</td>
+										<td class='linked' test-id='11'>Test diffetent actions on a static Table page</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 8, 2023 01:34:24 PM</td>
+										<td class='linked' test-id='12'>Test diffetent actions on a static Table page.As a Test Engineer, I want to retrieve the value of an static table</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 8, 2023 01:34:28 PM</td>
+										<td class='linked' test-id='15'>Test diffetent actions on a static Table page.As a Test Engineer, I want to validate the static table is displayed.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Smoke</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 8, 2023 01:34:24 PM</td>
+										<td class='linked' test-id='12'>Test diffetent actions on a static Table page.As a Test Engineer, I want to retrieve the value of an static table</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Regression</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 8, 2023 01:34:24 PM</td>
+										<td class='linked' test-id='12'>Test diffetent actions on a static Table page.As a Test Engineer, I want to retrieve the value of an static table</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 8, 2023 01:34:28 PM</td>
+										<td class='linked' test-id='15'>Test diffetent actions on a static Table page.As a Test Engineer, I want to validate the static table is displayed.</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -321,37 +495,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Scenarios
 					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>10</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 8, 2023 01:12:32 PM</div>
+					<div class='panel-lead'>Dec 8, 2023 01:34:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 8, 2023 01:12:42 PM</div>
+			 		<div class='panel-lead'>Dec 8, 2023 01:34:30 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 9s+381ms</div>
+					<div class='panel-lead'>0h 0m 13s+696ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -375,6 +549,33 @@
 									100%
 							</td>
 						</tr>
+						<tr>
+							<td>@Grid</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Smoke</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -386,16 +587,16 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
+                parentCount: 2,
+				passParent: 2,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 0,
-				childCount: 2,
-				passChild: 2,
+				childCount: 4,
+				passChild: 4,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -404,8 +605,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 6,
-				passGrandChild: 6,
+				grandChildCount: 10,
+				passGrandChild: 10,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -418,7 +619,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "I can find a team inside a state.":8.828
+			        "I can find a team inside a state.":7.212,"Test diffetent actions on a static Table page":6.165
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
