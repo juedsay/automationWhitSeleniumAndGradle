@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,11 +102,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -111,10 +119,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@List</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Grid</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Smoke</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Regression</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Amazon</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Cart</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -131,63 +137,52 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags=""
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@Amazon"
 												devices="">
-												<span class="tt">12.08.2023 13:34:17</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[I can find a team inside a state.] started</span>
-												
-											</div>
-											<div class="st pass test l1" 
-												tags="@List"
-												devices="">
-												<span class="tt">12.08.2023 13:34:17</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.] started</span>
+												<span class="tt">12.08.2023 21:29:52</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Test Amazon search funtionality] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @List</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Amazon</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l2" 
-												tags="@List"
+											<div class="st fail test l1" 
+												tags="@Cart"
 												devices="">
-												<span class="tt">12.08.2023 13:34:17</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.] started</span>
+												<span class="tt">12.08.2023 21:29:52</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Scenario Outline name: As a Customer when I search for Alexa, I want to see if the third option on the second is available for purchase and can be added to the cart] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @List</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Cart</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags="@Amazon @Cart"
+												devices="">
+												<span class="tt">12.08.2023 21:29:52</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Scenario Outline name: As a Customer when I search for Alexa, I want to see if the third option on the second is available for purchase and can be added to the cart] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @Amazon</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Cart</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:17</span>&nbsp;
+												<span class="tt">12.08.2023 21:29:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the list page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given the user navigate to www.amazon.com] started</span>
 												
 												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:21</span>&nbsp;
+													<span class="tt">12.08.2023 21:29:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the list page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">12.08.2023 13:34:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I search Boston in the list] started</span>
-												
-												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:22</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I search Boston in the list]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given the user navigate to www.amazon.com]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -195,40 +190,14 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:22</span>&nbsp;
+												<span class="tt">12.08.2023 21:29:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can find Boston Celtics in the list] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And searches for Alexa] started</span>
 												
 												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:22</span>&nbsp;
+													<span class="tt">12.08.2023 21:30:31</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can find Boston Celtics in the list]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags="@List"
-												devices="">
-												<span class="tt">12.08.2023 13:34:22</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Scenario Outline name: Scenario Outline name: As a Test Engineer, I want to validate that a text is present inside the list.] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @List</span>
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">12.08.2023 13:34:22</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the list page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:23</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the list page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And searches for Alexa]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -236,14 +205,14 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:23</span>&nbsp;
+												<span class="tt">12.08.2023 21:30:31</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I search New York in the list] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And navigate to the page 2] started</span>
 												
 												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:24</span>&nbsp;
+													<span class="tt">12.08.2023 21:30:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I search New York in the list]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And navigate to the page 2]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -251,113 +220,244 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:24</span>&nbsp;
+												<span class="tt">12.08.2023 21:30:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can find New York Knicks in the list] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And selects the third item] started</span>
 												
 												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:24</span>&nbsp;
+													<span class="tt">12.08.2023 21:30:49</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can find New York Knicks in the list]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And selects the third item]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											</div>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@Grid"
+											<div class="st fail test l3" 
+												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:24</span>&nbsp;
+												<span class="tt">12.08.2023 21:30:49</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the item is available to add it to the cart] started</span>
+												
+												<div class="st fail">
+													<span class="tt">12.08.2023 21:30:55</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the item is available to add it to the cart]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<Added to [c]art> but was:<Added to [C]art>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.AmazonSearchSteps.itemCanBeAddedToTheCart(AmazonSearchSteps.java:35)
+	at ✽.the item is available to add it to the cart(src/test/resources/features/AmazonSearch.feature:10)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">12.08.2023 21:30:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[Test diffetent actions on a static Table page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.tearDown(Scenario)] started</span>
+												
+												<div class="st info">
+													<span class="tt">12.08.2023 21:30:55</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.tearDown(Scenario)]</span>
+													
+													<span class="td">This scenario failed!</span>
+												</div>
+												<div class="st info">
+													<span class="tt">12.08.2023 21:30:55</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.tearDown(Scenario)]</span>
+													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Users\juedu\OneDrive\Escritorio\TestAutomation\test-output\embedded1.png'>img</a></span>
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags="@Amazon @Cart"
+												devices="">
+												<span class="tt">12.08.2023 21:30:55</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Scenario Outline name: As a Customer when I search for Alexa, I want to see if the third option on the second is available for purchase and can be added to the cart] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Grid</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Amazon</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Cart</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@Grid @Smoke @Regression"
-												devices="">
-												<span class="tt">12.08.2023 13:34:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[As a Test Engineer, I want to retrieve the value of an static table] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Grid</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Smoke</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
-												</span>
-												
-											</div>
-											<div class="st pass test l2" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:24</span>&nbsp;
+												<span class="tt">12.08.2023 21:30:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the static table] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given the user navigate to www.amazon.com] started</span>
 												
 												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:25</span>&nbsp;
+													<span class="tt">12.08.2023 21:30:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the static table]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given the user navigate to www.amazon.com]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:25</span>&nbsp;
+												<span class="tt">12.08.2023 21:30:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can return the value I wanted] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And searches for Playstation] started</span>
 												
 												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:28</span>&nbsp;
+													<span class="tt">12.08.2023 21:30:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can return the value I wanted]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And searches for Playstation]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st pass test l1" 
-												tags="@Grid @Regression"
-												devices="">
-												<span class="tt">12.08.2023 13:34:28</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[As a Test Engineer, I want to validate the static table is displayed.] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Grid</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
-												</span>
-												
-											</div>
-											<div class="st pass test l2" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:28</span>&nbsp;
+												<span class="tt">12.08.2023 21:30:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the static table] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And navigate to the page 2] started</span>
 												
 												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:29</span>&nbsp;
+													<span class="tt">12.08.2023 21:31:04</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to the static table]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And navigate to the page 2]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st fail test l3" 
 												tags=""
 												devices="">
-												<span class="tt">12.08.2023 13:34:29</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can validate the table is displayed] started</span>
+												<span class="tt">12.08.2023 21:31:04</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And selects the third item] started</span>
 												
-												<div class="st pass">
-													<span class="tt">12.08.2023 13:34:30</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I can validate the table is displayed]</span>
+												<div class="st fail">
+													<span class="tt">12.08.2023 21:31:14</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And selects the third item]</span>
 													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[4]/div[1]/div[1]/span[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pages.BasePage.Find(BasePage.java:52)
+	at pages.BasePage.clickElement(BasePage.java:56)
+	at pages.AmazonSearchPage.pick3Item(AmazonSearchPage.java:36)
+	at steps.AmazonSearchSteps.selectsThirdItem(AmazonSearchSteps.java:29)
+	at ✽.selects the third item(src/test/resources/features/AmazonSearch.feature:9)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[4]/div[1]/div[1]/span[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]"}
+  (Session info: chrome=120.0.6099.71)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FLOQOON', ip: '192.168.100.145', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\juedu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64036}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 948d4d07e59780d43efe5c7542588ce7
+*** Element info: {Using=xpath, value=/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[4]/div[1]/div[1]/span[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at pages.BasePage.Find(BasePage.java:52)
+	at pages.BasePage.clickElement(BasePage.java:56)
+	at pages.AmazonSearchPage.pick3Item(AmazonSearchPage.java:36)
+	at steps.AmazonSearchSteps.selectsThirdItem(AmazonSearchSteps.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)
+	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
+	at cucumber.runner.TestStep.run(TestStep.java:49)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
+	at cucumber.runner.TestCase.run(TestCase.java:44)
+	at cucumber.runner.Runner.runPickle(Runner.java:40)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:757)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l3" 
+												tags=""
+												devices="">
+												<span class="tt">12.08.2023 21:31:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the item is available to add it to the cart] started</span>
+												
+												<div class="st skip">
+													<span class="tt">12.08.2023 21:31:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the item is available to add it to the cart]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">12.08.2023 21:31:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.tearDown(Scenario)] started</span>
+												
+												<div class="st info">
+													<span class="tt">12.08.2023 21:31:14</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.tearDown(Scenario)]</span>
+													
+													<span class="td">This scenario failed!</span>
+												</div>
+												<div class="st info">
+													<span class="tt">12.08.2023 21:31:14</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.tearDown(Scenario)]</span>
+													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Users\juedu\OneDrive\Escritorio\TestAutomation\test-output\embedded2.png'>img</a></span>
 													<span class="td"></span>
 												</div>
 											</div>

@@ -39,6 +39,10 @@ public class BasePage {
         driver.get(url);
     }
 
+    public void goToLinkText(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
     public static void closeBrowser(){
         driver.quit();
         // driver.close(); //Other alternative but the "quit" method completely close the browser instance.
@@ -140,6 +144,6 @@ public class BasePage {
         return driver.findElements(By.className(locator));
     }
 
-
+    
 
 }
