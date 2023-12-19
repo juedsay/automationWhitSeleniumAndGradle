@@ -1,7 +1,7 @@
 
 Feature: Test Google Search functionality
 
-  
+  @Test
   Scenario: As a user I enter a search cruteria in Google
     Given I am on the Google search page
     When I search for criteria
